@@ -55,14 +55,21 @@ def monitor_feed():
         fire_check = cv2.countNonZero(image_binary_fire)
         if fire_check > 30:
             print("A FIRE? AT A SEA PARKS?")
-            eel.say_words("dear sir stroke madam FIRE EXCLAMATION MARK")()
+            # Pass fire detection status to ui
+            eel.update_fire_status(True)()
         else:
-            eel.say_words("no fires at sea parks")()
+            # Pass fire detection status to ui
+            eel.update_fire_status(False)()
 
         # Check if stove top bounds are within threshold
         stove_check = cv2.countNonZero(image_binary_stove_flame)
         if stove_check > 10:
             print("Stove on")
+            # Pass stove detection status to ui
+            eel.update_stovetop_status(True)()
+        else:
+            # Pass stove detection status to ui
+            eel.update_stovetop_status(False)()
 
         # Exit case for no video feed
         if not check:

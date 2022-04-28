@@ -8,4 +8,4 @@ def detect_fire():
 
 
 eel.init('ui', allowed_extensions=['.js', '.html'])
-eel.start('main.html', size=(300, 300))
+eel.start('main.html', size=(500, 250))
