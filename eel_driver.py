@@ -4,8 +4,8 @@ import vision
 
 @eel.expose
 def detect_fire():
-    main.code()
+    vision.monitor_feed()
 
 
-eel.init('.', allowed_extensions=['.js', '.html'])
+eel.init('ui', allowed_extensions=['.js', '.html'])
 eel.start('main.html', size=(300, 300))

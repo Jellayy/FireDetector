@@ -7,7 +7,7 @@ import eel
 def monitor_feed():
     # Init segmentor and background frame for background removal
     segmentor = SelfiSegmentation()
-    bg_frame = cv2.imread('background.png')
+    bg_frame = cv2.imread('assets/background.png')
     bg_frame = cv2.resize(bg_frame, (1280, 720))
 
     # Init Webcam capture
