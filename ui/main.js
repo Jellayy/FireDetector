@@ -18,10 +18,12 @@ $(document).ready(function () {
         else if (value) {
             $('#fire_detection').html(`FIRE DETECTED!`);
             $('#fire_detection').css("font-weight","bold");
+            $('#fire_detection').css("color","yellow");
         }
         else {
             $('#fire_detection').html(`No Fire Detected`);
             $('#fire_detection').css("font-weight","normal");
+            $('#fire_detection').css("color","#ffffff");
         }
     }
 
@@ -31,10 +33,12 @@ $(document).ready(function () {
         if (value) {
             $('#stovetop_detection').html('STOVETOP ON!');
             $('#stovetop_detection').css("font-weight","bold");
+            $('#stovetop_detection').css("color","yellow");
         }
         else {
             $('#stovetop_detection').html(`Stovetop Off`);
             $('#stovetop_detection').css("font-weight","normal");
+            $('#stovetop_detection').css("color","#ffffff");
         }
     }
 
